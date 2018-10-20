@@ -3,8 +3,8 @@ title: "Module2 - R Markdown Document 1"
 author: "Dave Holtschlag"
 date: "October 19, 2018"
 output:
-  pdf_document: default
   html_document: default
+  pdf_document: default
   word_document: default
 ---
 
@@ -96,5 +96,21 @@ You can also embed plots, for example:
 ```{r pressure, echo=FALSE}
 plot(pressure)
 ```
+
+
+```{r pressure2, fig.height = 5, fig.width = 5}
+plot(pressure)
+```
+
+
+```{r}
+knitr::kable(head(cars),
+             caption = 'Table 1. Top ten rows of the cars dataset')
+
+```
+## Insert an Equation
+
+$$ y = \beta_0 +  \beta_1 x $$
+
 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
